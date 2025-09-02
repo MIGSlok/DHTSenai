@@ -1,6 +1,6 @@
 async function atualizarDados() {
     try {
-        const resposta = await fetch("http://SEU_IP/dados"); // coloque o IP do ESP32
+        const resposta = await fetch("https://dhtsenai.onrender.com/dados"); // coloque o IP do ESP32
         const dados = await resposta.json();
 
         document.getElementById("temp").innerText = dados.temperatura + " °C";
