@@ -1,0 +1,102 @@
+/* Fundo com gradiente */
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #8385fc 0%, #244cff 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Cartão centralizado para o sensor */
+.sensor-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(44, 62, 80, 0.15);
+    padding: 2.5rem 2rem;
+    max-width: 350px;
+    width: 100%;
+    text-align: center;
+    margin: 2rem auto;
+    transition: box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sensor-card:hover {
+    box-shadow: 0 12px 32px rgba(44, 62, 80, 0.22);
+}
+
+/* Título */
+.sensor-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #2980b9;
+    margin-bottom: 1.2rem;
+    letter-spacing: 1px;
+}
+
+/* Temperatura */
+.sensor-temp {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #e67e22;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s;
+}
+
+.sensor-temp.cold {
+    color: #3498db;
+}
+.sensor-temp.hot {
+    color: #e74c3c;
+}
+
+/* Status */
+.sensor-status {
+    font-size: 1.1rem;
+    color: #636e72;
+    margin-bottom: 1.5rem;
+}
+
+/* Botão de atualização */
+.refresh-btn {
+    background: linear-gradient(90deg, #2980b9 0%, #6dd5fa 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.10);
+    transition: background 0.2s;
+}
+
+.refresh-btn:hover {
+    background: linear-gradient(90deg, #6dd5fa 0%, #2980b9 100%);
+}
+
+/* Ícone de temperatura */
+.temp-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #f39c12;
+}
+
+/* Responsivo */
+@media (max-width: 500px) {
+    .sensor-card {
+        padding: 1.2rem 0.5rem;
+        max-width: 95vw;
+    }
+    .sensor-title {
+        font-size: 1.3rem;
+    }
+    .sensor-temp {
+        font-size: 2.2rem;
+    }
+}
